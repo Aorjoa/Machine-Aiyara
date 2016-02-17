@@ -227,7 +227,7 @@ func (provisioner *AiyaraProvisioner) GenerateDockerOptions(dockerPort int, auth
 	aiyaraOpts := fmt.Sprintf("--label=architecture=%s", "arm")
 	daemonOpts := fmt.Sprintf("--host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:%d", dockerPort)
 	daemonOptsDir := "/etc/default/docker"
-	opts := fmt.Sprintf("%s %s %s", defaultDaemonOpts, aiyaraOpts, daemonOpts)
+	opts := fmt.Sprintf("%s %s %s", defaultDaemonOpts, daemonOpts, aiyaraOpts)
 	daemonCfg := fmt.Sprintf("export DOCKER_OPTS=\\\"%s\\\"", opts)
 	return &DockerOptions{
 		EngineOptions:     daemonCfg,

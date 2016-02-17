@@ -1,7 +1,7 @@
 package swarm
 
 const (
-	DockerImage              = "swarm:latest"
+	DockerImage              = "aiyara/swarm:latest"
 	DiscoveryServiceEndpoint = "https://discovery-stage.hub.docker.com/v1"
 )
 
