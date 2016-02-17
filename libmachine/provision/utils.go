@@ -234,7 +234,7 @@ func configureSwarm(p Provisioner, swarmOptions swarm.SwarmOptions) error {
 		return err
 	}
 
-	cmd, err := p.SSHCommand(fmt.Sprintf("sudo docker pull %s", swarm.DockerImage))
+	cmd, err := p.SSHCommand(fmt.Sprintf("docker pull %s", swarm.DockerImage))
 	if err != nil {
 		return err
 	}
