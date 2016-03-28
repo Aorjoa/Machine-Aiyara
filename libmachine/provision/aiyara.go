@@ -215,7 +215,7 @@ func (provisioner *AiyaraProvisioner) SSHCommand(args ...string) (*exec.Cmd, err
 
 func (provisioner *AiyaraProvisioner) CompatibleWithHost() bool {
 	id := provisioner.OsReleaseInfo.Id
-	return id == "ubuntu" || id == "debian"
+	return id == "ubuntu" || id == "debian" || id=="aiyara"
 }
 
 func (provisioner *AiyaraProvisioner) SetOsReleaseInfo(info *OsRelease) {
